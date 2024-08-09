@@ -9,6 +9,7 @@
     font-family: 'Roboto Slab', serif;
 }
 
+
 :root{
     --bg-color:#000000;
     --second-bg-color:#070e1b;
@@ -16,15 +17,18 @@
     --main-color:#0ef;
 }
 
+
 html{
     font-size: 62.5%;
     overflow-x: hidden;
 }
 
+
 body{
     background: var(--bg-color);
     color: var(--text-color);
 }
+
 
 .design{
     position: fixed;
@@ -38,23 +42,19 @@ body{
     background: var(--bg-color);
     z-index: 9999;
 }
-
 .design img {
     width: 80px;
     height: 80px;
 }
-
 .sticky{
     border-bottom: .5rem solid rgba(0,0,0,.2);
 }
-
 .nav_left {
     width: 600px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .nav_left .logo{
     font-size: 3rem;
     color: #0ef;
@@ -62,62 +62,53 @@ body{
     font-weight: 700;
     margin-right: 600px;
 }
-
 .nav_right a{
     font-size: 1.9rem;
     color:var(--text-color);
     margin: 0px 15px;
     transition: .3s;
 }
-
 .nav_right a:hover {
     color: #0ef;
     font-size: 2.3rem;
     text-decoration: underline;
 }
-
 .nav_right a.active{
     color:var(--main-color);
 }
+
 
 #menu{
     font-size: 3.6rem;
     color: var(--text-color);
     display: none;
 }
-
 section{
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
-
 .main{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
-
 .main .content h3{
     font-size: 3.2rem;
     font-weight: 500;
 }
-
 .main .content h3:nth-of-type(2){
     margin-bottom: 2rem;
 }
-
 span{
     font-weight: 700;
     color: var(--main-color);
 }
-
 .btns {
     width: 290px;
     display: flex;
     justify-content: space-between;
 }
-
 .btn{
     color: var(--second-bg-color);
     background: var(--main-color);
@@ -130,24 +121,20 @@ span{
     letter-spacing: .1rem;
     transition: .3s linear;
 }
-
 .btn:hover{
     box-shadow: none;
 }
-
 .main .content h1{
     font-size: 5rem;
     line-height: 1.2;
     font-weight: 600;
 }
-
 .main .home-img img{
     width: 35vw;
     /* filter: drop-shadow(2px 2px 8px #0ef); */
     mask-image: linear-gradient(#000, rgba(0,0,0,0.001));
     animation: floatImage1 4s ease-in-out infinite;
 }
-
 @keyframes floatImage1{
     0%{
         transform: translateY(0);
@@ -159,12 +146,10 @@ span{
         transform: translateY(0);
     }
 }
-
 .main .content p{
     font-size: 1.5rem;
     width: 550px;
 }
-
 .main .content .social-media a{
     width: 4rem;
     height: 4rem;
@@ -179,13 +164,13 @@ span{
     color: var(--main-color);
     transition: 0.5s linear;
 }
-
 .main .content .social-media a:hover{
     background: var(--main-color);
     color: var(--second-bg-color);
     box-shadow: 0 0 1rem var(--main-color);
     transform: scale(1.2);
 }
+
 
 .about{
     display: flex;
@@ -194,14 +179,12 @@ span{
     gap: 2rem;
     background: var(--second-bg-color);
 }
-
 .about .about-img img{
     width: 35vw;
     /* filter: drop-shadow(10px 10px 20px rgb(126, 41, 8)); */
     mask-image: linear-gradient(#000, rgba(0,0,0,0.001));
     animation: floatImage2 4s ease-in-out infinite;
 }
-
 @keyframes floatImage2{
     0%{
         transform: translateY(0);
@@ -213,18 +196,17 @@ span{
         transform: translateY(0);
     }
 }
-
 .about-content h2{
     text-align: left;
     font-size: 6rem;
     line-height: 1.2;
     margin-bottom: 1rem;
 }
-
 .about-content p{
     font-size: 1.6rem;
     margin: 2rem 0 3rem;
 }
+
 
 .skill .heading{
     text-align: left;
@@ -234,8 +216,6 @@ span{
     margin-bottom: 2rem;
     margin-top: 1rem;
 }
-
-
 .container {
     padding: 0px 50px;
     height: 60vh;
@@ -246,7 +226,6 @@ span{
     align-items: center;
     gap: 50px;
 }
-
 .skills_div {
     width: 120px;
     height: 120px;
@@ -257,59 +236,57 @@ span{
     align-items: center;
     overflow: hidden;
 }
-
 .skills_div img {
     width: 90px;
     height: 90px;
     color: #000000;
 }
-
 .skills_div {
     transition: 0.3s;
 }
-
 .skills_div:hover {
     transform: scale(1.22);
 }
 
+
 .projects{
     background: var(--second-bg-color);
-    padding: 8rem 12% 2rem;
-    
+    padding: 8rem 12% 2rem;   
 }
-
 .projects h2{
     font-size: 6rem;
     text-align: center;
     margin-bottom: 2rem;
 }
-
 .main-content{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     padding-top: 30px;
+    justify-content: center;
     align-items: center;
     gap: 2.5rem;
 }
-
 .main-content .sec-content {
     position: relative;
     border-radius: 2rem;
     box-shadow: 0 0 1rem var(--bg-color);
     display: flex;
     overflow: hidden;
+    scale: 0.8; opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 450px;
 }
-
+@keyframes fade-in {
+    to {scale: 1; opacity: 1;}
+}
  .sec-content img{
     width: 100%;
-    transition: .3s ease;
-    
+    transition: .3s ease;  
 }
-
 .sec-content:hover img{
     transform: scale(1.1);
 }
-
 .main-content .details{
     position: absolute;
     left: 0;
@@ -325,21 +302,17 @@ span{
     transform: translateY(100%);
     transition: .5s ease;
 }
-
 .sec-content:hover .details{
     transform: translateY(0%);
 }
-
 .main-content .details h4{
     font-size: 3.5rem;
 }
-
 .main-content .details p{
     font-size: 1.2rem;
     margin: .3rem 0 1rem;
     text-align: center;
 }
-
 .main-content .details a{
     display: inline-flex;
     width: 4rem;
@@ -349,11 +322,11 @@ span{
     border-radius: 50%;
     background: var(--text-color);
 }
-
 .main-content .details a i{
     font-size: 2rem;
     color: var(--second-bg-color);
 }
+
 
 .services .heading{
     text-align: left;
@@ -380,6 +353,13 @@ span{
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
+    scale: 0.8; opacity: 0;
+    animation: fade-in 2s linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 450px;
+}
+@keyframes fade-in {
+    to {scale: 1; opacity: 1;}
 }
 .services .main-content .service-box h3{
     font-size: 2.6rem;
@@ -393,10 +373,10 @@ span{
     transform: scale(1.02);
 }
 
+
 .experiences {
     background: var(--second-bg-color);
 }
-
 .experiences .heading {
     text-align: left;
     font-size: 6rem;
@@ -406,26 +386,23 @@ span{
     margin-bottom: 2rem;
 }
 
+
 .contact .heading{
 font-size: 6rem;
 text-align: center;
 margin-bottom: 4rem;
 }
-
 .contact form{
     max-width: 70rem;
     text-align: center;
     margin:1rem auto;
     margin-bottom: 3rem;
-
 }
-
 .contact form .input-box{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
 .contact form .input-box input,
 .contact form textarea{
     width: 100%;
@@ -436,23 +413,20 @@ margin-bottom: 4rem;
     border-radius: .8rem;
     margin: .7rem 0;
 }
-
 .contact form .input-box input{
     width: 49%;
 }
-
 .contact form textarea{
     resize: none;
 }
-
 .contact form .btn{
     margin-top: 1rem;
     cursor: pointer;
 }
-
 .contact{
     padding: 6rem 9% 2rem;
 }
+
 
 .footer{
     display: flex;
@@ -462,29 +436,24 @@ margin-bottom: 4rem;
     padding: 2rem 9%;
     background: var(--second-bg-color);
 }
-
 .footer p{
     font-size: 1.6rem;
 }
-
 .footer .icon a{
     display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: .8rem;
 }
-
 .footer .icon a i{
     font-size: 2.4rem;
     color: var(--main-color);
     filter: drop-shadow(-1px -1px 5px #0ef);
     transition: .3s linear;
 }
-
 .footer .icon a i:hover{
     filter: none;
 }
-
 #menu:hover+.navbar{
     display: block;
 }
