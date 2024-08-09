@@ -34,36 +34,49 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 50px;
+    padding: 0px 50px;
     background: var(--bg-color);
     z-index: 9999;
+}
+
+.design img {
+    width: 80px;
+    height: 80px;
 }
 
 .sticky{
     border-bottom: .5rem solid rgba(0,0,0,.2);
 }
 
-.logo{
+.nav_left {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav_left .logo{
     font-size: 3rem;
     color: #0ef;
     cursor: default;
     font-weight: 700;
+    margin-right: 600px;
 }
 
-.navbar a{
+.nav_right a{
     font-size: 1.9rem;
     color:var(--text-color);
     margin: 0px 15px;
     transition: .3s;
 }
 
-.navbar a:hover {
+.nav_right a:hover {
     color: #0ef;
     font-size: 2.3rem;
     text-decoration: underline;
 }
 
-.navbar a.active{
+.nav_right a.active{
     color:var(--main-color);
 }
 
